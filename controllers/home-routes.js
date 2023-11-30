@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
-const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -30,6 +29,37 @@ router.get('/signup', (req, res) => {
     return;
   }
   res.render('signup');
+});
+
+router.get('/posts/:id', async (req, res) => {
+  try {
+    const postData = await Post.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [
+        {
+          model: Comment,
+          include: {
+            model: User,
+            attributes: ['username'],
+          },
+        },
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+    if (!postData) {
+      res.status(404).json({ message: 'No post found with this id' });
+      return;
+    }
+    const post = postData.get({ plain: true });
+    res.render('single-post', { post, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

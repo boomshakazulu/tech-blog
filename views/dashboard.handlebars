@@ -4,12 +4,10 @@
   <h2>Your Posts</h2>
     {{#each posts as |post|}}
       {{> dashboard-details post}}
-      {{!-- <a href="/dashboard/edit/{{post.id}}">Edit post</a> --}}
     {{/each}}
 
 </section>
 {{/if}}
-
-<button type="submit" class="btn"><a class="link" href="/dashboard/new">+ New Post</a></button>
-
-<script src="/javascript/add-post.js"></script>
+<div class="btn-div">
+  <button type="submit" class="btn"><a class="link" href="/dashboard/new">+ New Post</a></button>
+</div>

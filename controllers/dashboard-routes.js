@@ -23,14 +23,14 @@ router.get('/edit/:id', withAuth, async (req, res) => {
       return;
     }
     const post = postData.get({ plain: true });
-    res.render('edit-post', { post, loggedIn: true });
+    res.render('edit-post', { post, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 router.get('/new', (req, res) => {
-  res.render('new-post');
+  res.render('new-post', { loggedIn: req.session.loggedIn });
 });
 
 module.exports = router;
