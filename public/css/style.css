@@ -202,3 +202,17 @@ main {
 .card-body {
   margin-left: 20px;
 }
+
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.new-post-form label {
+  text-align: center;
+}
+
+.new-post-form textarea {
+  height: 100px;
+}
