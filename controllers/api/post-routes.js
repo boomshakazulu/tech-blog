@@ -48,11 +48,17 @@ router.post('/', withAuth, async (req, res) => {
 // Update a post's title or text
 router.put('/:id', withAuth, async (req, res) => {
   try {
-    const postDate = Post.update({
-      where: {
-        id: req.params.id,
+    const postData = await Post.update(
+      {
+        title: req.body.title,
+        content: req.body.content,
       },
-    });
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
     if (!postData) {
       res.status(404).json({ message: 'No post found with this id' });
       return;

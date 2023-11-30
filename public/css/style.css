@@ -216,3 +216,7 @@ main {
 .new-post-form textarea {
   height: 100px;
 }
+
+.new-post-form .btn {
+  max-width: 100px;
+}

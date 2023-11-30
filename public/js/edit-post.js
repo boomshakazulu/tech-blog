@@ -6,7 +6,9 @@ const editFormHandler = async (event) => {
     window.location.toString().split('/').length - 1
   ];
 
-  const title = document.querySelector('input[name="post-title"]').value.trim();
+  const title = document
+    .querySelector('textarea[name="post-title"]')
+    .value.trim();
   const content = document.querySelector('textarea[name="content"]').value;
 
   // Get post title and post text from the form
