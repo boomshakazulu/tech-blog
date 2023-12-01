@@ -6,13 +6,14 @@
 
 ## Description
 
-  A blog of interacting with tech enthusiests.
+  A blog of interacting with tech enthusiasts.
   
 ---
 
 ## Usage
 
   Navigate to the website [here!](https://mysterious-atoll-43997-fe4bfa4a1235.herokuapp.com/), Create and account and create a new post on the dashboard. To edit a post click on the post title in the dashboard.
+![Screenshot](https://github.com/boomshakazulu/tech-blog/assets/120769113/b923b2a4-0545-453b-9f33-01988e06da3b)
 
 ---
 
