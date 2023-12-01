@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
-
+// gets all posts
 router.get('/', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -14,7 +14,7 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 module.exports = router;
-
+//grabs specific post for editing
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findOne({ where: { id: req.params.id } });
