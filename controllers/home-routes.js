@@ -30,7 +30,7 @@ router.get('/signup', (req, res) => {
   }
   res.render('signup');
 });
-
+//gets 1 post by id
 router.get('/posts/:id', async (req, res) => {
   try {
     const postData = await Post.findOne({
