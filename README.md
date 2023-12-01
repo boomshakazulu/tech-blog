@@ -17,6 +17,17 @@
 
 ---
 
+## Technologies
+MySql2<br>
+JavaScript<br>
+Node<br>
+Express, express-handlebars, express-session,connect-session-sequelize<br>
+Bcrypt<br>
+Dotenv<br>
+Heroku<br>
+
+---
+
 ## Contributing:
   
   To contribute to this application, create a pull request.
