@@ -21,9 +21,8 @@
 MySql2<br>
 JavaScript<br>
 Node<br>
-Express, express-handlebars, express-session,connect-session-sequelize<br>
-Bcrypt<br>
-Dotenv<br>
+Express<br>
+handlebars<br>
 Heroku<br>
 
 ---
